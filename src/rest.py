@@ -13,32 +13,6 @@ app = Flask(__name__)
 with open('/src/config.json') as data:
   config = json.load(data)
 
-## TODO: Local all configuration from a config file
-__config = {
-  'auth': {
-    'user': "Git2Swarm",
-    'token': "273051fa6828c519bf42dea09daccb01d6114da7"
-  },
-  'store': {
-    'stack': {
-      'org': "Git2Swarm",
-      'repo': "stack-store"
-    },
-    'pipeline': {
-      'org': "Git2Swarm",
-      'repo': "pipeline-store"
-    },
-    'environment': {
-      'org': "Git2Swarm",
-      'repo': "environment-store"
-    },
-    'testing': {
-      'org': "Git2Swarm",
-      'repo': "githubtest"
-    }
-  }
-}
-
 gitCommitterName  = "agileclouds"
 gitCommitterEmail = "admin@agileclouds.com"
 
