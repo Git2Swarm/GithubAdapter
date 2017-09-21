@@ -181,7 +181,7 @@ def _deleteFile(route, filename):
               'committer': { 'name': gitCommitterName, 'email': gitCommitterEmail}, 
               'sha': req.json()['sha'] }
 
-  req = requests.get( gitContentUrl,
+  req = requests.delete ( gitContentUrl,
 		      auth = getAuth(),
                       json = payload )
 
