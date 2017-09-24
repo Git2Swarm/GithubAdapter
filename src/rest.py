@@ -150,16 +150,7 @@ def _getFile(route, filename):
     response.status_code = req.status_code
     return response
 
-  data = req.json()
- 
-  content = base64.b64decode(data['content']).decode('utf-8')
-  response = jsonify ( {
-              'filename': data['name'],
-              'sha': data['sha'],
-              'content': content
-              } )
-  response.status_code = req.status_code
-  return response
+  return base64.b64decode(req.json()['content'])
 
 def _deleteFile(route, filename):
   gitContentUrl = "https://api.github.com/repos/" + \
